@@ -1,0 +1,248 @@
+  <style>
+    
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      height: 100vh;
+      display: flex;
+      justify-content: center; 
+      align-items: center;    
+      
+    }
+
+   body {
+  margin: 0;
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  min-height: 100vh;       
+  background-color: #f4f7f6; 
+}
+    .login-box {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 320px;
+      text-align: center;
+      border: 1px solid #007bff;
+    }
+
+    .login-box h2 {
+      margin-bottom: 20px;
+      color: #333;
+      text-align: center;
+    }
+
+    .input-group {
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .input-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .btn-login {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .btn-login:hover {
+      background-color: #0056b3;
+    }
+
+    .register-box {
+     background-color: #ffffff;
+     padding: 15px 20px;
+     border-radius: 8px;
+     box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1); 
+     border: 1px solid #007bff;
+     position: fixed; 
+     bottom: 20px;        
+     left: 50%;          
+    transform: translateX(-50%); 
+    }
+
+    .register-box p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .register-box a {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .register-box a:hover {
+      text-decoration: underline;
+    }
+
+    .barra-naranja {
+    position: fixed;           /* La fija en una posición de la pantalla */
+    top: 0;                    /* La pega al techo absoluto */
+    left: 0;                   /* La pega a la izquierda absoluta */
+    width: 130%;
+    background-color: #0800ff; 
+    padding: 33px 0;           
+    box-sizing: border-box;
+    z-index: 5; 
+    border: 3px solid black;
+}
+
+.menu-categorias {
+    max-width: 1350px;         
+    margin: 0 auto;          
+    display: flex;          
+    gap: 20px;                 
+    padding: 0 20px;         
+}
+
+.menu-categorias a {
+    color: #FFFFFF;           
+    text-decoration: none;     
+    font-family: sans-serif;   
+    font-weight: bold;        
+    font-size: 20px;           
+}
+
+.contenedor-busqueda {
+    position: relative;
+    width: 400px;         /* Controla el largo total de la barra blanca */
+    display: flex;
+    align-items: center;
+    margin-top: -640px;
+    margin-left: 600px;
+    z-index: 10;
+}
+
+.input-buscar {
+    width: 100%;
+    padding: 12px 60px 12px 20px; /* Espacio derecho (60px) para que el texto no toque la lupa */
+    border-radius: 30px;          /* Hace la barra blanca ovalada en las esquinas */
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.boton-lupa {
+    position: absolute;
+    right: 5px;                  
+    width: 38px;                
+    height: 38px;                
+    background-color: #0004ff;  
+    border-radius: 50%;         
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    background-image: url("fondo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Contenedor principal en la posición fija que deseas */
+.Ubicacion_imagen {
+  position: absolute;
+  top: 150px;       /* Ajusta este valor para bajar o subir todo el carrusel */
+  left: 50%;        /* Centra el contenedor en el eje horizontal */
+  transform: translateX(-50%); /* Truco CSS para centrado perfecto de pantallas */
+  width: 690px;    /* Ancho total del área del carrusel */
+  height: auto;
+  display: flex;
+  align-items: center;    /* Centra verticalmente las flechas con la imagen */
+  justify-content: center;
+  z-index: 1;
+}
+
+/* El cuadro intermedio que envuelve las fotos */
+.contenedor-slides {
+  width: 950px;     /* Espacio asignado solo para la imagen */
+  text-align: center;
+}
+
+/* Estilo de la imagen */
+.Ubicacion_imagen img {
+  width: 100%;      /* Ocupa el 100% de los 950px asignados arriba */
+  height: auto;
+  border: 4px solid black;
+  display: none;    /* JavaScript se encarga de mostrar la activa */
+}
+
+.flecha-carrusel {
+  position: absolute; /* Permite moverlas libremente con top/left/right */
+  top: 50%;           /* Las centra verticalmente respecto a la imagen */
+  transform: translateY(-50%);
+  background-color: blue;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  border: none;
+  width: 60px;      
+  height: 60px;     
+  cursor: pointer;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;      
+  transition: background 0.2s, transform 0.1s;
+}
+
+/* ──────────────────────────────────────────────────────────────
+   ¡AQUÍ DECIDES DÓNDE VA CADA UNA!
+   Modifica los píxeles (px) para moverlas a tu gusto.
+   ────────────────────────────────────────────────────────────── */
+
+/* Flecha Izquierda */
+.flecha-izq {
+  left: 0px;   /* Aumenta este número para meterla a la imagen, disminúyelo para sacarla */
+  z-index: 100;
+  top: 200px;
+  left: -50px;
+}
+
+/* Flecha Derecha */
+.flecha-der {
+  right: -86px;  /* Aumenta este número para meterla a la imagen, disminúyelo para sacarla */
+  z-index: 10;
+  top: 200px;
+}
+
+
+/* Efecto Hover */
+.flecha-carrusel:hover {
+  background-color: darkblue;
+  transform: translateY(-50%) scale(1.05); /* Mantiene el centrado y aumenta tamaño */
+}

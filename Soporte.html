@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Soporte - Mall Aserri</title>
+         <link rel="icon" type="image/png" href="image.png">
+         <link rel="stylesheet" href="disenos.css">
+    </head>
+<body>
+        <nav class="barra-naranja">
+    <div class="menu-categorias">
+        <a href="Principal.html">inicio</a>
+        <a href="#">Catalogo</a>
+        <a href="#">Contactos</a>
+        <a href="ubicaion.html">Ubicacion</a>
+    </div>
+</nav>
+
+    <img src="image.png" alt="imagen">
+
+<style>
+    img {
+        position: absolute;
+        top: 5px;          
+         left: 15px;        
+        width: 150px;
+        height: 80px;
+      display: block;
+      z-index: 10;
+}   
+
+.chat-container{
+    position: absolute;
+    left: 500px;
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.chat-box{
+    height: 300px;
+    padding: 15px;
+    overflow-y: auto;
+    background-color: rgb(156, 156, 156);
+    border-bottom: 1px solid black;
+}
+
+.chat-input-area{
+    display: flex;
+    padding: 10px;
+    background-color: rgba(0, 0, 255, 0.753);
+}
+
+.textarea{
+    flex-grow: 1;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid black;
+    resize: none;
+}
+
+.button{
+    margin-left: 10px;
+    padding: 8px 15px;
+     background-color: #007bff;
+     color: rgb(124, 225, 122);
+    border: none;
+     border-radius: 4px;
+     cursor: pointer;
+}
+
+.titulo_soporte{
+    position: absolute;
+    left: 630px;
+    top: 100px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+</style>
+
+<div class="contenedor-busqueda">
+    <input type="text" placeholder="Buscar productos" class="input-buscar">
+    <button class="boton-lupa">
+        <!-- Icono de lupa usando código SVG limpio -->
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="white" stroke-width="2.5" fill="none">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+    </button>
+</div>
+
+<div class="chat-container">
+  <div id="chat-box" class="chat-box"></div>
+  <div class="chat-input-area">
+    <textarea id="messageInput" placeholder="Escribe tu mensaje..."></textarea>
+    <button onclick="sendMessage()">Enviar</button>
+  </div>
+</div>
+
+<div class="titulo_soporte">
+    <h2>Bienvenido a Soporte</h2>
+</div>
+
+<script>
+    function sendMessage() {
+  const input = document.getElementById('messageInput');
+  const chatBox = document.getElementById('chat-box');
+  
+  if (input.value.trim() !== '') {
+    // Creamos el contenedor del mensaje
+    const messageElement = document.createElement('div');
+    messageElement.className = 'chat-message';
+    
+    // Insertamos el valor como HTML
+    messageElement.innerHTML = input.value;
+    
+    // Añadimos el mensaje al chat y limpiamos el input
+    chatBox.appendChild(messageElement);
+    input.value = '';
+    
+    // Auto-scroll hacia el último mensaje
+    chatBox.scrollTop = chatBox.scrollHeight;
+  }
+}
+</script>
+</body>
+</html>

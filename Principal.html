@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mall Aserri</title>
+    <link rel="icon" type="image/png" href="image.png">
+    <link rel="stylesheet" href="disenos.css">
+</head>
+<body>
+<nav class="barra-naranja">
+    <div class="menu-categorias">
+        <a href="Principal.html">inicio</a>
+        <a href="#">Catalogo</a>
+        <a href="#">Contactos</a>
+        <a href="Soporte.html">Soporte</a>
+        <a href="ubicaion.html">Ubicacion</a>
+    </div>
+</nav>
+
+<div class="contenedor-busqueda">
+    <input type="text" placeholder="Buscar productos" class="input-buscar">
+    <button class="boton-lupa">
+        <!-- Icono de lupa usando código SVG limpio -->
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="white" stroke-width="2.5" fill="none">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+    </button>
+</div>
+
+    <img src="image.png">
+
+<style>
+    img {
+        position: absolute;
+        top: 5px;          
+         left: 15px;        
+        width: 150px;
+        height: 80px;
+      display: block;
+      z-index: 10;
+}   
+
+</style>
+
+<div class="Ubicacion_imagen">
+  <!-- Flecha Izquierda -->
+  <button class="flecha-carrusel flecha-izq" onclick="cambiarImagen(-1)">&#10094;</button>
+
+  <!-- Contenedor de Imágenes -->
+  <div class="contenedor-slides">
+    <img class="mi-slide" src="carrusel1.jpg" alt="Mall Aserrí Vista 1" style="display: block;"> <!-- Añadido style para que se vea la primera de inmediato -->
+    <img class="mi-slide" src="malls-tenants-innovation-Simon-retail.webp" alt="Mall Aserrí Vista 2">
+    <img class="mi-slide" src="interior-design-luxury-shopping-mall-600nw-2493535891.webp" alt="Mall Aserrí Vista 3">
+  </div>
+
+  <!-- Flecha Derecha -->
+  <button class="flecha-carrusel flecha-der" onclick="cambiarImagen(1)">&#10095;</button>
+</div>
+
+
+<script src="carrusel.JS"></script>
+
+</body>
+</html>
